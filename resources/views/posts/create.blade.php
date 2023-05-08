@@ -5,14 +5,7 @@
     
     <form method="POST" action="{{route('posts.store')}}">
         @csrf
-        <label>
-            Title <br/>
-            <input type="text" name="title">
-        </label><br/>
-        <label>
-            Body<br/>
-            <textarea name="body"></textarea>
-        </label><br/>
+        @include('posts.form-fields')
         <button type="submit">Enviar</button>
         <br/>
 
